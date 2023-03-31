@@ -11,14 +11,14 @@ var vehicle2 = new Vehicle( 2 , 1 , 100 , false , 0 , 0 , true)
 function main() {
     console.log("start main...")
 
-    let myVehicle = vehicle2
+    let selectedVehicle = vehicle2 //esse é o veiculo selecionado
 
-    let id = myVehicle.id
-    let type = myVehicle.typeNow
-    let pos = myVehicle.position
-    let mec = myVehicle.isMechanic
-    let tank = myVehicle.gasTank
-    let speed = myVehicle.speed
+    let id = selectedVehicle.id
+    let type = selectedVehicle.typeNow
+    let pos = selectedVehicle.position
+    let mec = selectedVehicle.mechanicNow
+    let tank = selectedVehicle.gasTank
+    let speed = selectedVehicle.speed
 
     //show vehicle info
     document.getElementById("vehicleID").innerHTML = id
@@ -28,5 +28,5 @@ function main() {
     document.getElementById("vehicleTank").innerHTML = tank
     document.getElementById("vehicleSpeed").innerHTML = speed
 
-    blockButton.addEventListener("click", myVehicle.block)
+    blockButton.addEventListener("click", selectedVehicle.block)
 }                            
